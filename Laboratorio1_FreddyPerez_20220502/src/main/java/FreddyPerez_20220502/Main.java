@@ -56,9 +56,9 @@ public class Main {
                     System.out.println("Datos del estudiante :");
                     System.out.println("Id: ");
                     int cambioiD = sc.nextInt();
-                    System.out.println(" Nombre: ");
+                    System.out.println("Nombre: ");
                     String cambioNombre = sc.next();
-                    System.out.println(" Edad: ");
+                    System.out.println("Edad: ");
                     String cambioEdad = sc.next();
                     System.out.println(" Promedio: ");
                     double cambioPromedio = sc.nextDouble();
@@ -80,7 +80,6 @@ public class Main {
                 default:
                     System.out.println("El valor ingresado es incorrecto");
                     break;
-
         }
     }
         while(respuestaMain = true);
