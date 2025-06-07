@@ -12,4 +12,41 @@ public class Estudiantes {
         this.edad = edad;
         this.promedio = promedio;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getEdad() {
+        return edad;
+    }
+
+    public void setEdad(String edad) {
+        this.edad = edad;
+    }
+
+    public double getPromedio() {
+        return promedio;
+    }
+
+    public void setPromedio(double promedio) {
+        this.promedio = promedio;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id + ", Nombre: " + nombre + ", Edad: " + edad + ", Promedio: " + promedio;
+    }
 }
