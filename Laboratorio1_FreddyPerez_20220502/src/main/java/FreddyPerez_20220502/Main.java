@@ -40,14 +40,32 @@ public class Main {
                     double promedioEstudiante = sc.nextDouble();
                     listaEstudiantes.put(idEstudiante, new Estudiantes(idEstudiante, nombreEstudiante, edadEstudiante, promedioEstudiante));
                     System.out.println("Estudiante Agregado");
-                    respuestaMain = true;
+                    System.out.println("Desea ir al menú?");
+                    System.out.println("1. Ir al menú");
+                    System.out.println("Presione cualquier otra letra para Salir");
+                    int respuestaMenu = sc.nextInt();
+                    if(respuestaMenu == 1){
+                        respuestaMain = true;
+                    }
+                    else {
+                        respuestaMain = false;
+                    }
                     break;
                 case 2:
                     System.out.println("Todos los estudiantes: ");
                     for (Map.Entry <Integer, Estudiantes> entrada : listaEstudiantes.entrySet()){
                         System.out.println("Clave: "+ entrada.getKey() + " Estudiantes" + entrada.getValue());
                     }
-                    respuestaMain = true;
+                    System.out.println("Desea ir al menú?");
+                    System.out.println("1. Ir al menú");
+                    System.out.println("Presione cualquier otra letra para Salir");
+                     respuestaMenu = sc.nextInt();
+                    if(respuestaMenu == 1){
+                        respuestaMain = true;
+                    }
+                    else {
+                        respuestaMain = false;
+                    }
                     break;
                 case 3:
                     System.out.println(" Ingrese el estudiante que quiere actualizar por medio de su clave y los datos del estudiante: ");
@@ -64,18 +82,38 @@ public class Main {
                     double cambioPromedio = sc.nextDouble();
                     listaEstudiantes.replace(clave,new Estudiantes(cambioiD, cambioNombre, cambioEdad, cambioPromedio));
                     System.out.println("Datos Cambiados");
-                    respuestaMain = true;
+                    respuestaMenu = sc.nextInt();
+                    if(respuestaMenu == 1){
+                        respuestaMain = true;
+                    }
+                    else {
+                        respuestaMain = false;
+                    }
                     break;
                 case 4:
                     System.out.println("Ingrese la Clave del estudiante que desea eliminar: ");
                     int eliminarEstudiante = sc.nextInt();
                     listaEstudiantes.remove(eliminarEstudiante);
                     System.out.println("Estudiante Eliminado");
+                    respuestaMenu = sc.nextInt();
+                    if(respuestaMenu == 1){
+                        respuestaMain = true;
+                    }
+                    else {
+                        respuestaMain = false;
+                    }
                     break;
                 case 5:
                     System.out.println("Ingrese la clave del estudiante quedesea buscar: ");
                     int buscarPorClave = sc.nextInt();
                     System.out.println(listaEstudiantes.containsKey(buscarPorClave));
+                    respuestaMenu = sc.nextInt();
+                    if(respuestaMenu == 1){
+                        respuestaMain = true;
+                    }
+                    else {
+                        respuestaMain = false;
+                    }
                     break;
                 default:
                     System.out.println("El valor ingresado es incorrecto");
